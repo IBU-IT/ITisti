@@ -1,0 +1,8 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+    <item name="ic_menu_home" type="drawable">@drawable/ic_home_black_24dp</item>
+    <item name="ic_menu_gallery" type="drawable">@drawable/ic_my_location_black_24dp</item>
+    <item name="ic_menu_slideshow" type="drawable">@drawable/ic_settings_black_24dp</item>
+    <item name="ic_menu_manage" type="drawable">@drawable/ic_help_outline_black_24dp</item>
+    <item name="ic_menu_share" type="drawable">@drawable/ic_share_black_24dp</item>
+    <item name="ic_menu_send" type="drawable">@drawable/ic_send_black_24dp</item>
+</resources>
