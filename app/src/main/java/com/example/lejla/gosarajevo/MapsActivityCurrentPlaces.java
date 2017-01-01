@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
@@ -33,6 +34,7 @@ import com.google.android.gms.maps.model.MarkerOptions;
 /**
  * An activity that displays a map showing places around the device's current location.
  */
+
 public class MapsActivityCurrentPlaces extends AppCompatActivity implements
         OnMapReadyCallback,
         GoogleApiClient.ConnectionCallbacks,
@@ -79,7 +81,7 @@ public class MapsActivityCurrentPlaces extends AppCompatActivity implements
         }
 
         // Retrieve the content view that renders the map.
-        setContentView(R.layout.activity_maps_current_places);
+        setContentView(R.layout.activity_map);
         // Build the Play services client for use by the Fused Location Provider and the Places API.
         buildGoogleApiClient();
         mGoogleApiClient.connect();
@@ -349,6 +351,17 @@ public class MapsActivityCurrentPlaces extends AppCompatActivity implements
                     .snippet(getString(R.string.default_info_snippet)));
         }
     }
+
+        /**
+         * Set up the {@link android.app.ActionBar}, if the API is available.
+         */
+        private void setupActionBar() {
+            ActionBar actionBar = getSupportActionBar();
+            if (actionBar != null) {
+                // Show the Up button in the action bar.
+                actionBar.setDisplayHomeAsUpEnabled(true);
+            }
+        }
 
     /**
      * Updates the map's UI settings based on whether the user has granted location permission.
