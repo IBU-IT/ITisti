@@ -7,30 +7,75 @@
     android:fitsSystemWindows="true"
     tools:context="com.example.lejla.gosarajevo.MainActivity">
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-
-        <GridView
-            android:id="@+id/app_bar_main_gridView"
+    <GridLayout
             android:layout_width="match_parent"
-            android:layout_height="500dp"
-            android:numColumns="4"
-            android:layout_alignParentBottom="true"
+            android:layout_height="617dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
-            android:verticalSpacing="50dp" android:layout_marginTop="50dip"
-            android:columnWidth="80dp"
-            android:stretchMode="columnWidth"/>
+            android:layout_alignParentRight="true"
+            android:background="@drawable/home_screen"
+            android:layout_alignParentBottom="true">
 
-    </RelativeLayout>
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="?attr/colorPrimary"
+                app:popupTheme="@style/AppTheme.PopupOverlay" />
 
-    <android.support.v7.widget.Toolbar
-        android:id="@+id/toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
-        android:background="?attr/colorPrimary"
-        app:popupTheme="@style/AppTheme.PopupOverlay" />
+            <Button
+                android:text="Where To Eat"
+                android:layout_width="match_parent"
+                android:layout_height="78dp"
+                android:id="@+id/btnWhereToEat"
+                android:layout_row="26"
+                android:layout_column="0"
+                android:background="@null"
+                android:textAllCaps="false"
+                android:textColor="@color/orange"
+                android:gravity="center_horizontal|center"
+                android:drawableLeft="@drawable/ic_eat"
+                android:drawablePadding="1dip"
+                android:paddingLeft="120dip"
+                android:paddingRight="120dip"
+                />
+
+            <Button
+                android:text="Where To Sleep"
+                android:layout_width="match_parent"
+                android:layout_height="91dp"
+                android:id="@+id/btnWhereToSleep"
+                android:layout_row="25"
+                android:layout_column="0"
+                android:background="@null"
+                android:textAllCaps="false"
+                android:textColor="@color/orange"
+                android:drawableLeft="@drawable/ic_zzz_sleep_symbol"
+                android:gravity="center_horizontal|center"
+                android:drawablePadding="1dip"
+                android:paddingLeft="120dip"
+                android:paddingRight="120dip"
+                />
+
+            <Button
+
+                android:text="Where To Go"
+                android:textAllCaps="false"
+                android:layout_width="match_parent"
+                android:layout_height="84dp"
+                android:id="@+id/btnWhereToGo"
+                android:layout_row="24"
+                android:layout_column="0"
+                android:background="@null"
+                android:textColor="@color/orange"
+                android:drawableLeft="@drawable/ic_pin"
+                android:gravity="center_horizontal|center"
+                android:drawablePadding="1dip"
+                android:paddingLeft="120dip"
+                android:paddingRight="120dip"
+                />
+
+
+        </GridLayout>
 
 </android.support.design.widget.CoordinatorLayout>

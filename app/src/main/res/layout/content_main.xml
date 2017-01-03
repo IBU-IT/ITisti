@@ -21,8 +21,31 @@
             android:layout_alignParentStart="true"
             android:layout_marginTop="54dp" />
 
-
     </RelativeLayout>
+
+    <AutoCompleteTextView
+        android:layout_width="36dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/searchText"
+        android:width="250dp"
+        android:hint="Select Category"
+        android:paddingLeft="10dp"
+        android:imeOptions="actionSearch"
+        android:completionThreshold="1"
+        android:maxLines="1"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Search"
+        android:id="@+id/search"
+        android:layout_below="@+id/searchText"
+        android:layout_centerHorizontal="true"
+        android:gravity="right|center_vertical"
+        app:layout_anchorGravity="top|right"
+        android:layout_gravity="bottom|left" />
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar"
